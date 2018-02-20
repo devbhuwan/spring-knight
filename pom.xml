@@ -19,6 +19,7 @@
 
     <modules>
         <module>spring-knight-core</module>
+        <module>spring-knight-java-dsl</module>
     </modules>
 
     <properties>
