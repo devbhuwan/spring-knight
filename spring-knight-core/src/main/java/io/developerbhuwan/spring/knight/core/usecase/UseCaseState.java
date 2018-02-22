@@ -1,4 +1,5 @@
 package io.developerbhuwan.spring.knight.core.usecase;
 
-public interface Request {
+public enum UseCaseState {
+    NOT_BEGIN, FAILED, SUCCEED
 }

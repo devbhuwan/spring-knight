@@ -1,5 +1,8 @@
 package io.developerbhuwan.spring.knight.core.usecase;
 
+import io.developerbhuwan.spring.knight.core.usecase.model.UseCase;
+import io.developerbhuwan.spring.knight.core.usecase.model.UseCaseDomain;
+import io.developerbhuwan.spring.knight.core.usecase.model.UseCaseResult;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
 import lombok.Value;
@@ -9,7 +12,7 @@ import org.junit.Test;
 public class UseCaseUnitTests {
 
     private final PersonEntry PERSON_ENTRY = new PersonEntry("Bhuwan Upadhyay");
-    AddPersonUseCase addPersonUseCase;
+    private AddPersonUseCase addPersonUseCase;
 
     @Before
     public void setUp() {
@@ -24,14 +27,19 @@ public class UseCaseUnitTests {
     @Value
     @EqualsAndHashCode(callSuper = false)
     @ToString
-    private class PersonEntry implements Request {
+    private class PersonEntry implements UseCaseDomain {
         private final String fullName;
+
+        @Override
+        public ResultMap<UseCaseResult> create() {
+            return null;
+        }
     }
 
     private class AddPersonUseCase implements UseCase<PersonEntry> {
 
         @Override
-        public void execute(PersonEntry request) {
+        public void execute(PersonEntry domain) {
             throw new UseCaseExecutedException();
         }
     }
