@@ -6,7 +6,7 @@
 
     <groupId>io.developerbhuwan.spring.knight</groupId>
     <artifactId>spring-knight-parent</artifactId>
-    <version>1.0.0.BUILD-SNAPSHOT</version>
+    <version>1.0.0.SK-1-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>Spring Knight</name>
@@ -19,6 +19,7 @@
 
     <modules>
         <module>spring-knight-core</module>
+        <module>spring-knight-java-dsl</module>
     </modules>
 
     <properties>
